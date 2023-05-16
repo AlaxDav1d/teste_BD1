@@ -1,0 +1,84 @@
+<?php
+    if(isset($_POST['submit'])){
+        print_r($_POST['nome']);
+        print_r($_POST['email']);
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form{
+            background-color: none;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+            height: 250px;
+            width: 400px;
+        }
+        input{
+            padding: 5px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 10px;
+            text-transform: capitalize;
+        }
+        ::placeholder{
+            color: rgb(0, 187, 255);
+        }
+        .tudo{
+            background-color: #29005a;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-self: center;
+        }
+        #send{
+            background-color: rgb(64, 114, 158);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        #send:hover{
+            background-color: rgb(172, 2, 2);
+            color: #fff;
+            transition: 600ms;
+        }
+        h1{
+            color: #fff;
+            text-transform: capitalize;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tudo">
+        <h1>formulario de teste </h1>
+        <form action="index.php" method="post" >
+            <input type="text" name="nome" placeholder="digite seu nome">
+            <label for="nome"></label>
+            <input type="text" name="email" placeholder="digite seu email">
+            <label for="email"></label>
+            <input type="button" value="enviar" id="send">  
+        </form>
+    </div>
+</body>
+</html>
